@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul, li{margin: 0; padding: 0; list-style-type: none;}
+        #menu{
+            /* height: 50px; */
+            overflow:auto;
+        }
+        #menu li{
+            float:left;
+            height: 50px;
+            line-height: 50px;
+            /* width:14.28%; */
+            width:150px;
+            text-align: center;
+        }
+        /* 
+        구조선택자
+        :nth-child()  -> ()안에 수열을 넣는다 
+            - 2n : 짝수
+            - 3n : 3의 배수
+            - 2n+1 : 홀수
+        :first-child -> 처음 자손
+        :last-child -> 마지막 자손
+
+        */
+        #menu>li:nth-child(2n+1){
+            background: lightblue;
+        }
+        #menu>li:nth-child(2n){
+            background: rgb(9, 112, 164);
+            color:whitesmoke;
+        }
+        
+        #menu>li:first-child{
+            border-radius:20px 0px 0px 20px;
+        }
+        #menu>li:last-child{
+            border-radius:0px 20px 20px 0px;
+        }
+        #menu>li:nth-child(3){
+            color: burlywood;
+        }
+        #boardDiv{
+            width: 1000px;
+            margin: 50px auto;
+            text-align: center;
+            overflow: auto;
+        }
+        #boardDiv li{
+            float: left;
+            width:10%;
+            height: 40px;
+            line-height: 40px;
+            border-bottom: 1px solid grey;
+        }
+        #boardDiv li:nth-child(5n+2){
+            width: 60%;
+            text-align: left;
+        }
+        
+
+    </style>
+</head>
+<!-- 
+    html속성
+    oncentextmenu : 마우스 오른쪽 버튼 메뉴 제어
+    onselectstart : 선택 시작을 못하게
+ -->
+<body oncontextmenu="return false" onselectstart="return false">
+    <ul id="menu">
+        <li>AAAA</li>
+        <li>BBBB</li>
+        <li>CCCC</li>
+        <li>DDDD</li>
+        <li>EEEE</li>
+        <li>FFFF</li>
+        <li>GGGG</li>
+    </ul>    
+    <div id="boardDiv">
+        <ul>
+            <li>번호</li>
+            <li>제목</li>
+            <li>작성자</li>
+            <li>등록일</li>
+            <li>조회수</li>
+
+            <li>100</li>
+            <li>구조선택자</li>
+            <li>ggamangso</li>
+            <li>12-29 09:38</li>
+            <li>2</li>
+
+            <!-- <li>99</li>
+            <li>고급선택자</li>
+            <li>ggamangso</li>
+            <li>12-28 09:38</li>
+            <li>5</li>
+
+            <li>98</li>
+            <li>자손선택자</li>
+            <li>ggamangso</li>
+            <li>12-27 09:38</li>
+            <li>21</li>
+
+            <li>97</li>
+            <li>후손선택자</li>
+            <li>ggamangso</li>
+            <li>12-26 09:38</li>
+            <li>37</li> -->
+        </ul>  
+    </div>
+    <style>
+        /* 
+        구조선택자
+            :nth-of-type() -> 몇번째, 홀수번째, 짝수번째 등등 () 수식 넣어 선택
+        */
+
+        #d1>h1:nth-of-type(2n){
+            background: pink;
+        }
+        #d1>h2:nth-of-type(2n+1){
+            background: yellow;
+        }
+        #d1>h1:first-of-type{
+            color: yellowgreen;
+        }
+        #d1>h2:last-of-type{
+            color: orangered;
+        }
+    </style>
+    <div id="d1">
+        <h1>구조선택자 111111</h1>
+        <h2>구조선택자 AAAAAA</h2>
+        <h1>구조선택자 222222</h1>
+        <h2>구조선택자 BBBBBB</h2>
+        <h1>구조선택자 333333</h1>
+        <h2>구조선택자 CCCCCC</h2>
+        <h1>구조선택자 444444</h1>
+        <h2>구조선택자 DDDDDD</h2>
+
+    </div>
+    <style>
+        /* 
+        텍스트선택자
+            ::first-letter -> 문단의 첫번제 문자에 스타일 적용
+            ::first-line -> 문단의 첫번째줄에 스타일 적용
+            ::selection  -> 선택영역에 스타일 적용
+            */
+        #txt::first-letter{
+            font-size: 1.5em;
+            color: yellow;
+            background-color: yellowgreen;
+        }
+        #txt::first-line{
+            text-decoration: line-through;
+        }
+        #txt::selection{
+            background: black;
+            color: yellow;
+            font-weight: bolder;
+        }
+    </style>
+    <div id="txt">
+        기아는 스팅어의 디자인 차별화 모델인 ‘트리뷰트(Tribute) 에디션’을 22일(목)부터 국내 200대(글로벌 포함 총 1,000대) 한정 판매한다고 밝혔다.
+ 
+        스팅어 트리뷰트 에디션은 스팅어 3.3 가솔린 터보 GT 트림을 기반으로 전용 내외장 색상과 디자인 사양을 적용한 것이 특징이다.
+         
+        전용 외장 색상으로 애스코트 그린과 새로 추가된 문스케이프 매트 그레이 등 2가지의 색상을 선택할 수 있으며 각 100대씩 판매한다.
+         
+        <s>또한 19인치 휠, 아웃사이드 미러, 캘리퍼에 블랙 색상을 적용해 역동적인 분위기를 구현했다. (※ 블랙 캘리퍼는 퍼포먼스 사양 선택 시 적용)
+
+        실내는 트리뷰트 에디션 전용 ‘테라코타 브라운 인테리어’를 신규 적용하고 콘솔 상단과 도어 가니시(장식)에 카본 무늬의 소재를 사용해 고급감을 한층 높였다.</s>
+ 
+        이와 더불어 차명에서 착안한 말벌 모양의 엠블럼을 헤드레스트에 적용하고 운전석측 도어 스커프에 고객이 직접 선택 가능한 고유 일련번호를 새겨 트리뷰트 에디션만의 차별화된 가치를 선사한다.
+         
+        스팅어 트리뷰트 에디션의 판매 가격은 개별소비세 3.5% 기준 4,825만 원이다.
+        
+        한편, 기아는 구매 고객을 대상으로 카드지갑, 키홀더, 여권케이스 등 ‘스미스앤레더’와 협업한 한정판 가죽 굿즈와 기념 인증패를 제공하고 추후 스팅어만의 고성능을 즐길 수 있는 서킷 주행 이벤트를 진행하는 등 다양한 혜택을 제공할 예정이다.
+        
+        기아 관계자는 “트리뷰트 에디션은 스팅어가 프리미엄 퍼포먼스 세단으로서 기아 브랜드에 공헌한 바를 기리기 위한 한정판매 모델”이라며 “새로운 내외장 색상과 고유 일련번호 등 특별한 디자인 요소를 적용해 소장 가치를 높였다”고 말했다.
+    </div>
+</body>
+</html>

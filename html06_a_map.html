@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지도에 링크 걸기</title>
+</head>
+<body>
+    <h1>1개의 이미지로 여러 곳으로  링크 걸기</h1>
+    <img src="img/jeju_map.jpg" usemap="#jeju_map" />
+
+    <pre>
+        여러곳으로 링크걸기
+        area태그 : 링크걸기 태그
+        shape속성 : 링크모양
+          - circle : 원형 (필요값 :  x좌표,y좌표,반지름)
+          - rect : 사각형 (필요값 :  왼쪽위,오른쪽아래 x/y좌표 순서)
+          - poly : 다각형 (필요값 :  각꼭지점 x/y좌표 순서대로)
+    </pre>
+    <map name="jeju_map">
+
+        <area shape="circle" coords="336,260,40" href="https://www.jeju.go.kr/index.htm" target="_blank"/>
+        <area shape="rect" coords="180,130,305,165" href="https://www.jejuair.net/" target="_blank" />
+        <area shape="poly" coords="41,221,19,257,79,278,144,246,66,214" href="html01_index.html" target="_blank" />
+         
+
+    </map>
+    
+</body>
+</html>

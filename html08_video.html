@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비디오 삽입하기</title>
+</head>
+<body>
+    <h1>비디오 파일 삽입하기</h1>
+    <pre>
+
+        video태그 : 비디오 파일 삽입 태그
+        controls속성 : 속성값은 없고, 파일의 재생등을 컨트롤할 수있는 박스를 보여줌
+        autoplay속성 : 페이지 열릴때 자동실행(muted 된 상태로만 자동실행가능)
+          - 브라우저에서 막아놓음
+        loop속성 : 반복재생(값없으면 계속 재생, 값을 주면 지정값만큼 재생)
+        muted : 기본값으로 음소거 된 채로 재생
+        width, height속성 : 플레이어 크기 (백분율, 픽셀 가능)
+        poster속성 : 썸네일
+
+    </pre>
+
+    <video src="audio_movie/Wildlife.mp4" controls loop="2" poster="img/4.jpg" width="80%"></video>
+    <video src="audio_movie/Wildlife.webm" controls width="80%"></video>
+</body>
+</html>

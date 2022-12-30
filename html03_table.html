@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+</head>
+<body>
+    <h1> 표만들기</h1>
+    <pre>
+        table : 표의 시작
+        tr : 줄 생성
+        td : 칸 생성
+        th : 제목이 되는 줄로 정해짐
+        thead : 가장 첫줄
+    </pre>
+
+    <table border="1" >
+        <caption>표를 만들어 보았어요</caption>
+        <tr>
+            <th>가</th>
+            <th>나</th>
+            <th>다</th>
+            <th>라</th>
+        </tr>
+        <thead>
+            <tr>            
+                <th>
+                    <ul>
+                        <li>릴리</li>
+                        <li>데이지</li>
+                    </ul>
+                </th>
+                <td>
+                    <ol>
+                        <li>로즈</li>
+                        <li>퍼퓸</li>
+                    </ol>
+                </td>
+                <td>
+                    <ul>
+                        <li>뭐가</li>
+                        <li>있었찌</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>몰라</li>
+                        <li>나아두</li>
+                    </ul>
+                </td>
+            </tr>
+        </thead>
+        
+    </table>
+    <hr/>
+    <pre>
+        colspan : 열 합치기
+        rowspan : 행 합치기
+    </pre>
+    <table border="1">
+        <caption>행 또는 열 합치기</caption>
+        <tr>
+            <td>1111111111</td>
+            <td colspan="2">222222222</td>
+        </tr>
+        <tr>
+            <td colspan="2">3333333333</td>
+            <td>4444444444</td>
+        </tr>
+        <tr>
+            <td>5555555555</td>
+            <td rowspan="2">666666666</td>
+            <td>7777777777</td>
+        </tr>
+        <tr>
+            <td>88888888888</td>
+            <td>99999999999</td>
+        </tr>
+
+
+    </table>
+
+</body>
+</html>

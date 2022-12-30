@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{margin: 0px;}
+        .header{
+            background: beige;
+            height:200px;
+        }
+        .container{
+            background-color: azure;
+            width: 1000px;
+            margin: 0 auto; /* div를 전체폭의 가운데로 배치한다*/
+        }
+        .footer{
+            height: 100px;
+            background-color: gold;
+        }
+        /* > : 자손 선택자, 공백문자 : 후손선택자 */
+    
+        .header>div{
+            background-color:royalblue;
+            width: 1000px;
+            height: 150px;
+            margin: 0 auto; /* 블럭을 가운데로 높을때 마진을 이용한다 */
+            font-size: 3em; /*px, pt, cm, mm, in(inch), em:1em(기본크기), 백분율*/
+            text-align: center; /*문자 정렬 left, right, center*/
+            line-height: 150px; /*한 줄의 높이 설정*/
+        }   
+        .topMenu, topmenu>li{
+            margin: 0;
+            padding: 0;
+
+            list-style-type: none;
+        }
+        .topMenu{
+            background-color: red;
+            height: 50px;
+            width: 1000px;
+            margin: 0 auto;
+      
+        }
+        .topMenu>li{
+            float:left;
+             /*정렬하면 컨텐츠 영역으로 폭,높이 맞춰지고, 상위 태크의 높이 0이됨*/
+            background-color: lightblue;
+            width : 20%;
+            text-align: center;
+            line-height: 50px;
+            font-size: 1.2em; 
+       }
+        /* 
+        a태그 링크시 스타일
+            가상클래스가 걸림
+            :link  - 링크시 ,
+            :visited - 방문페이지,
+            :hover -  마우스오버시 
+            :active - 누른상태
+        text-decoration (텍스트 꾸미기?)
+            - underline, overline, line-through, none
+        */
+        /*a:link{
+            color:green;
+            text-decoration: none;
+        }
+        a:visited{
+            color:blue;
+            text-decoration: none;
+        }
+        a:hover{
+            color:orange;
+            text-decoration: underline;
+        }
+        a:active{
+            color:red;
+        } */
+
+        a:link, a:visited{
+            color:orange;
+            text-decoration: none;
+        }
+        a:hover{
+            color:red;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div>
+           멀티캠퍼스
+        </div>
+        <ul class="topMenu">
+            <li><a href="html01_index.html">홈</a></li>
+            <li><a href="https://www.nate.com" target="_blank">네이트</a></li>
+            <li><a href="#">커뮤니티</a></li>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">고객센터</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <br/> <!--h1의 마진이 div 마진을 넘어가서 한칸 안으로 넣어주기 위함-->
+        <h1>컨텐츠</h1>
+        <img src="img/jeju_map.jpg">
+    </div>
+    <div class="footer">
+        하단
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr = new Array();
+        arr[0] = "홍길동";
+        arr[5] = "최길동";
+        arr[10] = "김길동";
+
+        console.log(arr);
+
+        for (let i=0; i<arr.length; i++){
+
+        document.write("arr["+i+"] : " + arr[i]+"<br/>");
+        }
+
+        var arr2 = new Array("HTML","CSS", "javascript");
+        var arr3 = ["spring", "mybatis"];
+        console.log(arr2, arr3);
+
+        //배열의 데이터 추가하기
+        arr2.push("JSP");
+       document.write(arr2);
+
+        //배열의 값을 특정문자로 구별하게 만들기
+        var arrStr = arr2.join('/');
+        document.write("<br/>arrStr : " + arrStr);
+        console.log(arrStr);
+
+        //배열의 마지막 값 제거하기
+        document.write("<br/>arr2 : " + arr2);
+        arr2.pop();
+        document.write("<br/>arr2 : " + arr2);
+
+        //배열과 배열 합치기
+        var arr4 = arr2.concat(arr3);
+        document.write("<br/>arr4 : " + arr4);
+        console.log(arr4);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

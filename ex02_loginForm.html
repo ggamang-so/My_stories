@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0 auto;
+            padding: 0;
+            text-align: center;
+        }
+        .first-comment{
+            width:80%;
+            height: 100px;
+            margin-top: 30px;
+            margin-bottom:70px;
+        }
+        .ment{
+            margin-bottom:40px;
+            line-height: 1.3em;
+        }
+        form *{
+            width: 500px;
+            height: 50px;
+            margin: 5px;
+            font-size: 1em;
+        }
+        form input{
+            text-align: left;
+            padding-left: 15px;
+            width: 480px;
+            
+        }
+        button{
+            background: #0C82E9;
+            color: white;
+            font-size: 1.2em;
+            margin-top: 15px;
+            border : 0px;
+
+        }
+        ul li{
+            list-style-type: none;
+            float:left;
+            width:150px;
+            border-right:1px solid grey ;
+            
+        }
+        ul:last-child{
+            border:0px;
+        }
+        .footer{
+            margin-top: 50px;
+
+            line-height: 1em;
+            width:480px;
+        }
+        .small{
+            font-size: 0.8em;
+        }
+        ::placeholder{
+            color: black;
+            font-weight: bolder;
+        }
+        a:link, a:visited{
+            color : darkgray;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="first-comment">    
+        <h1 class="ment">서울시 통합회원 로그인</h1>
+        <div class="ment" style="line-height: 1.5em;">
+            서울특별시 누리집을 방문해주셔서 감사합니다.<br/>
+            로그인하시면 보다 편리하게 서비스 이용이 가능합니다.
+        </div>
+    </div>
+
+    <form>
+        <input type="text" name="userId" 
+            placeholder="아이디(5~15자의 영문, 숫자만 가능)"/><br/>
+        <input type="password" name="userPw"
+            placeholder="비밀번호"/><br/>
+        <button>로그인</button>
+    </form>
+    <div class="footer small">
+        <ul>
+            <li><a href="#">아이디 찾기</a></li>
+            <li><a href="#">비밀번호 찾기</a></li>
+            <li><a href="#">회원가입</a></li>
+        </ul>
+    </div>
+    
+</body>
+</html>

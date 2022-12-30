@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오디오 삽입하기</title>
+</head>
+<body>
+    <h1>오디오 파일 삽입하기</h1>
+    <pre>
+        audio태그 : 오디오 파일 삽입 태그
+        controls속성 : 속성값은 없고, 파일의 재생등을 컨트롤할 수있는 박스를 보여줌
+
+    </pre>
+    <audio src="audio_movie/Kalimba.mp3" controls ></audio>
+    <audio controls >
+        <source src="audio_movie/Kalimba.ogg" type="audio/ogg"/>
+        <source src="audio_movie/Kalimba.mp3" type="audio/mp3"/>
+    </audio>
+    <video src="audio_movie/Wildlife.mp4" controls width="80%"></video>
+    <video src="audio_movie/Wildlife.webm" controls width="80%"></video>
+</body>
+</html>

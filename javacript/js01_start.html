@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js">
+    </script>
+    <script>
+        // 변수선언, 수식, 명령어
+        // document : 내장된 객체
+        // .write : 내장되 메소드()
+        let a=10;
+        document.write("javacript에서 표시");
+        // 자바스크립트에서 html 태그를 사용할 수 있으며, 반드시 문자열로 표기하여야한다.
+        document.write('<br/>document내장객체~~~');
+        document.write("<img src=\"../img/1.jpeg\"/>");
+        // '', "" 를 이중/다중으로 사용할 때, 교차로 사용하거나 제어문자 사용
+
+        // 알림창
+        // alert("안녕하세요");
+        // 확인창
+        // yes -> true, no -> false 반환
+        // document.write(confirm("삭제할까요?"));
+        // 프롬프트 창
+        document.write("당신의 성별은 "+ prompt("성별이 무엇입니까?","남성")+ "입니다");
+        document.write("나이--> "+ prompt("나이를 입력하세요",20));
+
+        // 개발자 도구(f12) : element, console 등 개발에 필요한 정보들 확인
+        console.log("")
+    </script>
+</head>
+<body>
+    <h1>자바스크립트 시작하기</h1>
+    <script>
+        document.write(a);
+    </script>
+</body>
+</html>

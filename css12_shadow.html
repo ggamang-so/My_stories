@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 800px;
+            height: 150px;
+            line-height: 150px;
+            font-size: 5em;
+            border: 1px solid gray;
+            margin: 100px;
+            text-align: center;
+        }
+        #txt{
+            text-shadow: -10px  -10px  10px  grey;
+                      /* x방향   y방향  번짐    색상  */
+        }
+        #box{
+            border : 0;
+            border-radius: 40px 40px;
+            box-shadow:  20px  20px  30px  grey;
+                      /* x방향   y방향  번짐    색상  */
+        }
+        /* 
+         - 그라데이션
+          : http://colorzilla.com/gradient-editor
+          그라데이션(gradient) css 코드를 생성해주는 사이트
+        */
+        #gradient{
+            height: 800px;
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ef2fe9+0,0205c9+19,f25d1d+38,02e82c+51,bbe002+60,bf012a+82,2af202+100 */
+            background: #ef2fe9; /* Old browsers */
+            background: -moz-linear-gradient(45deg,  #ef2fe9 0%, #0205c9 19%, #f25d1d 38%, #02e82c 51%, #bbe002 60%, #bf012a 82%, #2af202 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(45deg,  #ef2fe9 0%,#0205c9 19%,#f25d1d 38%,#02e82c 51%,#bbe002 60%,#bf012a 82%,#2af202 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(45deg,  #ef2fe9 0%,#0205c9 19%,#f25d1d 38%,#02e82c 51%,#bbe002 60%,#bf012a 82%,#2af202 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ef2fe9', endColorstr='#2af202',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+        }
+    </style>
+</head>
+<body>
+    <div id="txt">문자에 그림자 설정</div>
+    <div id="box">박스에 그림자 설정</div>
+    <div id="gradient"></div>
+</body>
+</html>

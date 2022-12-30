@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        div{
+            background: lightgrey;
+            margin: 10px;
+            color: darkblue;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="arrayData1"></div>
+    <div id="arrayData2"></div>
+    <div id="asc1"></div>
+    <div id="asc2"></div>
+    <div id="desc1"></div>
+    <div id="desc2"></div>
+
+    <script>
+        var num = [25, 35,99,201,3,956,7,21,5];
+        var str = ["orange","banana","apple","pineapple","peach","tomato","melon","mango"];
+
+        // DOM(Document Object Model)
+        document.getElementById("arrayData1").innerHTML ="<b>num : " + num+"</b>";       
+        document.getElementById("arrayData2").innerHTML ="<i>str : " + str+"</i>";        
+
+        //Ascending 
+        // 아스키코드상의 순서를 바탕으로 오름 차순으로 정렬됨
+        str.sort();
+        document.getElementById("asc2").innerHTML ="문자에 대한 오름차순 적용하면??!(ascending) : " + str;
+        num.sort(function(x,y){return x-y});
+        document.getElementById("asc1").innerHTML ="숫자에 대한 오름차순 적용하면??!(ascending) : " + num;
+
+
+        // 내림차순으로 정렬하기 => 오른차순정렬하고 역순정렬함
+        str.reverse();
+        document.getElementById("desc2").innerHTML ="문자에 대한 내림차순 적용하면??!(descending) : " + str;
+        num.sort(function(x,y){return y-x});
+        document.getElementById("desc1").innerHTML ="숫자에 대한 내림차순 적용하면??!(descending) : " + num;
+    </script>
+    
+</body>
+</html>
