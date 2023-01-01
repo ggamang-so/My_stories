@@ -79,11 +79,11 @@
         </div>
     </div>
 
-    <form>
+    <form method="post" action="a.jsp">
         <input type="text" name="userId" 
-            placeholder="아이디(5~15자의 영문, 숫자만 가능)"/><br/>
+            placeholder="아이디(5~15자의 영문, 숫자만 가능)" minlength ="5" maxlength="15" required/><br/>
         <input type="password" name="userPw"
-            placeholder="비밀번호"/><br/>
+            placeholder="비밀번호" required/><br/>
         <button>로그인</button>
     </form>
     <div class="footer small">

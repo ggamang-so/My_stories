@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #clock{
+            width : 300px;
+            height: 70px;
+            line-height: 70px;
+            font-size: 3em;
+            text-align: center;
+            border: 2px solid yellowgreen;
+
+        }
+        #num{
+            width : 300px;
+            height: 300px;
+            line-height: 300px;
+            font-size: 5em;
+            text-align: center;
+            border: 2px solid orange;
+            border-radius: 150px;
+
+        }
+    </style>
+    <script>
+        function clockView(){
+            var now = new Date();
+            var hour = String(now.getHours()).padStart(2,"0");  // padStart는 string문자열에 대해서 실행된다.
+            var minute = String(now.getMinutes()).padStart(2,"0");
+            var second = String(now.getSeconds()).padStart(2,"0");
+
+            document.querySelector("#clock").innerText = `${hour} : ${minute} : ${second}`;
+        }
+
+
+    </script>
+</head>
+<body>
+    <h1>setInterval</h1>
+    <!--  -->
+    <div id="clock"></div>
+    <script>
+        // 일정한 시간으로 반복하는 메소드
+        clockView();
+        setInterval(clockView, 1000); // clearInterval(interTimer)
+    </script>
+
+    <h1>setTimeout</h1>
+    <div id="num">
+
+    </div>
+    <script>
+        // setTimeout을 이용한 함수재호출
+        var n = 1;
+    
+        function setNum(){
+            document.querySelector("#num").innerText = n;
+
+            var timer = setTimeout(setNum,100);
+            if (n>100){ // n이 100되면 타임아웃이 중단됨
+                clearTimeout(timer);
+            }
+            n++;
+        }
+        setNum();
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width:800px;
+        }
+
+    </style>
+    <script>
+        var imgName = ["1.jpeg","2.jpeg","3.jpeg","4.jpg","5.jpg","title_layer.gif"];
+
+        function setImage() {
+            var imgTag = "";
+            for (let i = 0; i<imgName.length; i++){
+                imgTag += `<img src="../img/${imgName[i]}"/><br/>`;
+            }
+            document.querySelector("#imgView").innerHTML = imgTag;
+        }
+        //현재 스크롤 위치
+        console.log(window.scrollY, document.documentElement.scrollTop);
+
+        //스크롤 이동하기
+        // window.scrollTo(0,300); // 절대 위치로 
+        // window.scrollBy(0,50);  // x, 수치만큼이동
+
+        function scrollAuto(){ 
+            window.scrollBy(0,10);
+            // var i = 1;
+            // va
+        }
+        // if (window.scrollY)
+        var scrollDown = setInterval(scrollAuto,50)
+        
+        
+    </script>
+</head>
+<body onload="setImage()">
+    <!-- onmouseover(onmouseenter) : 객체에 마우스가 들어오면
+         onmouseout(onmouseleave)  : 객체에서 마우스가 나가면 -->
+   <div id="imgView" onmouseover="clearInterval(scrollDown)" onmouseout="scrollDown = setInterval(scrollAuto,50)">
+
+   </div>
+
+    
+</body>
+</html>

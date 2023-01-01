@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #over {
+            background: olive;
+            padding: 50px;
+        }
+
+        #over>div {
+            background-color: yellow;
+            padding: 50px;
+        }
+
+        #over h1 {
+            background: red;
+            text-align: center;
+        }
+        #enter {
+            background: purple;
+            padding: 50px;
+        }
+
+        #enter>div {
+            background-color: rgba(253, 161, 233, 0.94);
+            padding: 50px;
+        }
+
+        #enter h1 {
+            background: rgb(227, 255, 134);
+            text-align: center;
+        }
+    </style>
+    <script>
+        var cnt = 1;
+        function eventTest() {
+            document.querySelector("h2").innerText = cnt;
+            cnt++;
+        }
+
+        var outCnt = 1;
+        function eventTest2() {
+            document.querySelector("h3").innerText = outCnt;
+            outCnt++;
+        }
+    </script>
+</head>
+
+<body>
+    <div id="over" onmouseover="eventTest()" onmouseout="eventTest2()">
+        <div>
+            <h1>onmouseover와 onmouseout</h1>
+           <!-- 
+                onmouseover와 onmouseout은 하위에 있는 객체라도 
+                각 경계를 넘어 들어가서나 나오는 과정에서 
+                상위객체에서 나오면서 하위객체로 들어가는 과정이 동시에 일어나 
+                각각 이벤트가 발생한다.
+
+            -->
+        </div>
+    </div>
+    <br/>
+    <div id="enter" onmouseenter="eventTest()" onmouseleave="eventTest2()">
+        <div>
+            <h1>onmouseenter와 onmouseleave</h1>
+           <!-- 
+                onmouseenter와 onmouseleave는 하위객체가 있더라도
+                대상 객체의 최외곽 경계선 안으로 들어오고 나가는 것에만 이벤트를 발생시킨다.
+
+            -->
+        </div>
+    </div>
+    <h2></h2>
+    <h3></h3>
+</body>
+
+</html>

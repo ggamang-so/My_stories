@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function chkState() {
+            const chk = document.querySelector("#chk");
+            const checked = chk.checked
+            if (checked) {
+                // 날짜 구하기
+                var now = new Date(); // 현재 날짜
+                var date = now.getDate();
+                now.setDate(date + 7); // 현재 날짜 +7일
+
+
+                // 쿠키 기록
+                //                 변수 = 상수;저장위치;만료시점(소멸시점)
+                document.cookie = `popup=yes;path=/;expires=${now}`;
+
+
+            }
+            self.close();
+        }
+    </script>
+</head>
+
+<body>
+    <img src="../img/3.jpeg" width="100%" />
+    <div>
+        <input type="checkbox" name="chk" id="chk" /> 오늘 그만보기
+        <input type="button" value="Close" id="closeOk" onclick="chkState()" />
+    </div>
+</body>
+
+</html>
